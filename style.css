@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@300;400;500;700&family=Montserrat:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0c0c0c;
+    color:#f2f2f2;
+
+    font-family:'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 80px;
+
+    z-index:1000;
+
+    background:rgba(0,0,0,0.4);
+
+    backdrop-filter:blur(10px);
+}
+
+header h1{
+    font-family:'Allura', cursive;
+
+    font-size:55px;
+
+    color:#9ff0c7;
+}
+
+nav{
+    display:flex;
+
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:white;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#9ff0c7;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+
+    background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.hero-overlay{
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+    position:relative;
+
+    z-index:2;
+
+    max-width:950px;
+}
+
+.mini-text{
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+    color:#9ff0c7;
+
+    font-size:13px;
+}
+
+.hero h2{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:95px;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+    color:white;
+}
+
+.descricao{
+    font-size:21px;
+
+    line-height:1.9;
+
+    color:#dddddd;
+}
+
+/* SOBRE */
+
+.sobre{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:80px;
+
+    padding:160px 90px;
+
+    background:#111;
+}
+
+.texto{
+    max-width:650px;
+}
+
+.texto span{
+    letter-spacing:5px;
+
+    color:#9ff0c7;
+
+    font-size:13px;
+}
+
+.texto h2{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:75px;
+
+    line-height:1.1;
+
+    margin:25px 0;
+
+    color:white;
+}
+
+.texto p{
+    font-size:19px;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+    color:#d8d8d8;
+}
+
+.imagem img{
+    width:450px;
+
+    border-radius:30px;
+}
+
+/* FRASE */
+
+.frase{
+    padding:170px 30px;
+
+    text-align:center;
+}
+
+.frase h2{
+    font-family:'Allura', cursive;
+
+    font-size:95px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    color:#9ff0c7;
+
+    line-height:1.5;
+}
+
+/* GALERIA */
+
+.galeria{
+    padding:140px 40px;
+
+    background:#111;
+
+    text-align:center;
+}
+
+.galeria h3{
+    font-family:'Allura', cursive;
+
+    font-size:75px;
+
+    margin-bottom:70px;
+
+    color:#9ff0c7;
+}
+
+.grid{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+}
+
+.grid img{
+    width:100%;
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    transition:0.4s;
+}
+
+.grid img:hover{
+    transform:scale(1.03);
+
+    filter:brightness(1.1);
+}
+
+/* FINAL */
+
+.final{
+    padding:180px 20px;
+
+    text-align:center;
+}
+
+.final h2{
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:85px;
+
+    max-width:1000px;
+
+    margin:auto;
+
+    line-height:1.2;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px;
+
+    text-align:center;
+
+    background:black;
+}
+
+footer p{
+    color:#bbbbbb;
+
+    letter-spacing:2px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .hero h2{
+        font-size:55px;
+    }
+
+    .sobre{
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:90px 20px;
+    }
+
+    .texto h2{
+        font-size:50px;
+    }
+
+    .imagem img{
+        width:100%;
+        max-width:420px;
+    }
+
+    .frase h2{
+        font-size:55px;
+    }
+
+    .final h2{
+        font-size:50px;
+    }
+
+}
